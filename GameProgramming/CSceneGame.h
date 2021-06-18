@@ -8,12 +8,14 @@
 class CSceneGame : public CScene {
 public:
 
-	~CSceneGame();
 	//初期化処理のオーバーライド
 	void Init();
 	//更新処理のオーバーライド
 	void Update();
 
+	EScene GetNextScene();
+	//デストラクタの宣言
+	~CSceneGame();
 };
 
 #endif

@@ -171,7 +171,7 @@ void CTexture::DrawImage(float left, float right, float bottom, float top, int t
 		(float)(mHeader.height - ttop) / mHeader.height);
 
 	return;
-
+/*
 	//テクスチャを有効にする
 	glEnable(GL_TEXTURE_2D);
 	//アルファブレンドを有効にする
@@ -207,7 +207,7 @@ void CTexture::DrawImage(float left, float right, float bottom, float top, int t
 	glDisable(GL_BLEND);
 	//テクスチャを無効
 	glDisable(GL_TEXTURE_2D);
-
+*/
 }
 
 void CTexture::SetParts(int row, int col) {

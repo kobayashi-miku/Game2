@@ -19,6 +19,8 @@ public:
 		EBLOCK,			//ブロック
 		EPLAYER,        //プレイヤー
 		EENEMY,         //敵
+		ETBLOOK,        //透明ブロック
+		EAITEMU,        //アイテム
 	};
 	ETag mTag;	//列挙型の変数
 	//デフォルトコンストラクタ

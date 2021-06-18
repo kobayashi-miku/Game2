@@ -4,16 +4,10 @@
 #include "GLFW/glfw3.h"
 #include "Update.h"
 
-//#include "main.h"
-//#include "CSceneManager.h"
-
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 
 bool InitFlg = true;
-
-//シーンマネージャのインスタンス
-CSceneManager SceneManager;
 
 /* display関数
 1秒間に60回実行される
@@ -27,11 +21,11 @@ void display() {
 	glLoadIdentity();
 
 	if (InitFlg) {
-//		Init();
+		Init();
 		InitFlg = false;
 	}
 	else {
-//		Update();
+		Update();
 	}
 
 }
@@ -97,7 +91,7 @@ int main(void)
 	glfwMakeContextCurrent(window);
 
 
-	glClearColor(0.7f, 0.7f, 0.7f, 1.0f);
+	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
 	// GLEW を初期化する
 	glewExperimental = GL_TRUE;
@@ -116,17 +110,12 @@ int main(void)
 
 	// ウィンドウのサイズ変更時に呼び出す処理の登録
 	glfwSetWindowSizeCallback(window, reshape);
-	reshape(window, WINDOW_WIDTH, WINDOW_HEIGHT);
+	reshape(window, 800, 600);
 
 	//ライトの設定（3D必要 2D不要）
 	//固定シェーダー用
 //	glEnable(GL_LIGHTING);
 //	glEnable(GL_LIGHT0);
-//	float lightPosition[] = {0.0f, 100.0f, 100.0f, 1.0f};
-//	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-
-//	glEnable(GL_NORMALIZE);
-
 	//メッシュシェーダー用
 //	CLight::getLight(0)->setDir(CVector3(0, -1, 1).GetNormalize());
 //	CLight::getLight(0)->setColor(CVector3(0.9f, 0.9f, 0.9f), CVector3(1.0f, 1.0f, 1.0f));*/

@@ -1,39 +1,24 @@
 #ifndef CENEMY_H
 #define CENEMY_H
-//キャラクタクラスのインクルード
-#include "CCharacter.h"
-//コライダクラスのインクルード
-#include "CCollider.h"
-/*
-エネミークラス
-キャラクタクラスを継承
-*/
-class CEnemy : public CCharacter {
+
+#include "CRectangle.h"
+
+class CEnemy : public CRectangle {
 public:
-	static int sCount;	//インスタンス数
-	int mHp;	//ヒットポイント
+//	int HP;
 
-	//コライダ
-	CCollider mCollider1;
-	CCollider mCollider2;
-	CCollider mCollider3;
+	int mFx; //X軸方向の移動 -1:左 0:移動しない 1:右へ移動
+	int mFy; //Y軸方向の移動 -1:下 0:移動しない 1:上へ移動
 
-	//コンストラクタ
-	//CEnemy(モデル, 位置, 回転, 拡縮)
-	CEnemy(CModel *model, CVector position, CVector rotation, CVector scale);
-	//更新処理
+	int mFireCount;
+
+	CEnemy();
+
 	void Update();
-	////確認用メソッド　削除予定
-	//void CEnemy::Render() {
-	//	CCharacter::Render();
-	//	mCollider1.Render();
-	//	mCollider2.Render();
-	//	mCollider3.Render();
-	//}
-	//衝突処理
-	//Collision(コライダ1, コライダ2)
-	void Collision(CCollider *m, CCollider *o);
-	void TaskCollision();
+	void Collision(CRectangle &r);
+	void Render();
+
+	void Collision(CRectangle *i, CRectangle *y);
 };
 
 #endif
