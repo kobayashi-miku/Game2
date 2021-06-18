@@ -1,0 +1,145 @@
+﻿2021/06/18 10:18:05 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\kobam\Desktop\Git まとめ\Git2 プ実(s)\Game2\GameProgramming\GameProgramming.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CEnemy.cpp CPlayer.cpp CRectangle.cpp CSceneGame.cpp CTexture.cpp Updata.cpp
+         Updata.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(82): error C2663: 'CTexture::DrawImage' : 3 オーバーロードに 'this' ポインターのための必要な定義がされていません。
+         CTexture.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.cpp(49): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : 'fopen' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.cpp(56): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 'strcpy' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.cpp(72): error C2039: 'discripter' : 'STgamHeader' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.h(9) : 'STgamHeader' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.cpp(79): error C2039: 'discripter' : 'STgamHeader' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\ctexture.h(9) : 'STgamHeader' の宣言を確認してください。
+         CSceneGame.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(82): error C2663: 'CTexture::DrawImage' : 3 オーバーロードに 'this' ポインターのための必要な定義がされていません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cmap.h(12): error C2661: 'CRectangle::Render' : 4 個の引数を伴うオーバーロードされた関数はありません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(23): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(32): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(34): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(61): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(61): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(61): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(74): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(79): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(79): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(79): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(79): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(81): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(81): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(81): error C2227: '->mGameOver' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(82): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(82): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(82): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(82): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(84): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(84): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(84): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(84): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(93): error C2065: 'e' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(94): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(94): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(94): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(94): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(96): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(96): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(96): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(96): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(100): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(100): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(100): error C2227: '->Life' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(101): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(101): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(101): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(101): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(105): error C2039: 'e' : 'CSceneGame' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.h(8) : 'CSceneGame' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(105): error C2065: 'e' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(106): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(106): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(106): error C2227: '->mGameClear' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(107): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(107): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(107): error C2227: '->mGameClear' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(108): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(108): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(108): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(108): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(110): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(110): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(110): error C2227: '->x' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+                 型は 'unknown-type' です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(110): error C2660: 'CText::DrawString' : 関数に 4 個の引数を指定できません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cscenegame.cpp(127): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+         CRectangle.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(82): error C2663: 'CTexture::DrawImage' : 3 オーバーロードに 'this' ポインターのための必要な定義がされていません。
+         CPlayer.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(82): error C2663: 'CTexture::DrawImage' : 3 オーバーロードに 'this' ポインターのための必要な定義がされていません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(10): error C2614: 'CPlayer' : イニシャライズ リスト内のクラス 'mFx' が基底クラスでもメンバーでもありません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(10): error C2614: 'CPlayer' : イニシャライズ リスト内のクラス 'mFy' が基底クラスでもメンバーでもありません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(12): error C2065: 'spInstance' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(14): error C2039: 'spInstance' : 'CPlayer' のメンバーではありません。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.h(11) : 'CPlayer' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(19): error C2065: 'x' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(20): error C2065: 'mFx' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(21): error C2065: 'mFy' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(24): error C2065: 'x' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(25): error C2065: 'mFx' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(26): error C2065: 'mFy' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(30): error C2065: 'y' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(31): error C2065: 'mFx' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(32): error C2065: 'mFy' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(36): error C2065: 'y' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(37): error C2065: 'mFx' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(38): error C2065: 'mFy' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(44): error C2352: 'CRectangle::Render' : 静的でないメンバー関数の呼び出しが正しくありません
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(79) : 'CRectangle::Render' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(48): error C2065: 'EBLOOK' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(50): error C2352: 'CRectangle::Collision' : 静的でないメンバー関数の呼び出しが正しくありません
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(73) : 'CRectangle::Collision' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(55): error C2065: 'x' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(59): error C2065: 'y' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(62): fatal error C1075: 左側 中かっこ '{' に対応するものが 'c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cplayer.cpp(48)' で見つかる前に EOF が検出されました。
+         CEnemy.cpp
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\crectangle.h(82): error C2663: 'CTexture::DrawImage' : 3 オーバーロードに 'this' ポインターのための必要な定義がされていません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.cpp(27): error C2562: 'CEnemy::Collision' : 関数は 'void' 型として宣言されていますが、値を返しました。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.h(18) : 'CEnemy::Collision' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.cpp(31): error C2065: 'ETBLOCK' : 定義されていない識別子です。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.cpp(31): error C2051: case 式は、整数型定数でなければなりません。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.cpp(50): error C2562: 'CEnemy::Collision' : 関数は 'void' 型として宣言されていますが、値を返しました。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.h(18) : 'CEnemy::Collision' の宣言を確認してください。
+     1>c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.cpp(52): error C2562: 'CEnemy::Collision' : 関数は 'void' 型として宣言されていますが、値を返しました。
+                 c:\users\kobam\desktop\git まとめ\git2 プ実(s)\game2\gameprogramming\cenemy.h(18) : 'CEnemy::Collision' の宣言を確認してください。
+         コードを生成中...
+     1>プロジェクト "C:\Users\kobam\Desktop\Git まとめ\Git2 プ実(s)\Game2\GameProgramming\GameProgramming.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:02.26

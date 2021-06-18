@@ -117,11 +117,11 @@ void CTexture::Load(const char* filename) {
 	delete[] data2;
 }
 
-void CTexture::Draw(float left, float right, float bottom, float top, float tleft, float tright, float tbottom, float ttop) {
+void CTexture::Draw(float left, float right, float bottom, float top, float tleft, float tright, float tbottom, float ttop) const {
 	DrawImage(left, right, bottom, top, tleft, tright, tbottom, ttop);
 }
 
-void CTexture::DrawImage(float left, float right, float bottom, float top, float tleft, float tright, float tbottom, float ttop) {
+void CTexture::DrawImage(float left, float right, float bottom, float top, float tleft, float tright, float tbottom, float ttop) const {
 	//テクスチャを有効にする
 	glEnable(GL_TEXTURE_2D);
 	//アルファブレンドを有効にする
@@ -159,12 +159,12 @@ void CTexture::DrawImage(float left, float right, float bottom, float top, float
 	glDisable(GL_TEXTURE_2D);
 }
 
-void CTexture::Draw(float left, float right, float bottom, float top, int tleft, int tright, int tbottom, int ttop) {
+void CTexture::Draw(int left, int right, int bottom, int top, int tleft, int tright, int tbottom, int ttop) const {
 	DrawImage(left, right, bottom, top, tleft, tright, tbottom, ttop);
 }
 
-void CTexture::DrawImage(float left, float right, float bottom, float top, int tleft, int tright, int tbottom, int ttop) {
-	DrawImage(left, right, bottom, top,
+void CTexture::DrawImage(int left, int right, int bottom, int top, int tleft, int tright, int tbottom, int ttop) const {
+	DrawImage((float)left, (float)right, (float)bottom, (float)top,
 		(float)tleft / mHeader.width,
 		(float)tright / mHeader.width,
 		(float)(mHeader.height - tbottom) / mHeader.height,
@@ -219,10 +219,10 @@ void CTexture::DrawImage(float left, float right, float bottom, float top, int i
 	int row = index / mCol + 1;
 	int col = index % mCol;
 	DrawImage(left, right, bottom, top,
-		mHeader.width * col++ / mCol,
-		mHeader.width * col / mCol,
-		mHeader.height * row-- / mRow,
-		mHeader.height * row / mRow);
+		(float)mHeader.width * col++ / mCol,
+		(float)mHeader.width * col / mCol,
+		(float)mHeader.height * row-- / mRow,
+		(float)mHeader.height * row / mRow);
 }
 
 //行数列数の設定
