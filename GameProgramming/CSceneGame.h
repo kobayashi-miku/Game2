@@ -7,6 +7,7 @@
 */
 class CSceneGame : public CScene {
 public:
+	int e;
 
 	//初期化処理のオーバーライド
 	void Init();

@@ -63,6 +63,18 @@
     <ClCompile Include="CTexture.cpp">
       <Filter>ソース ファイル\Lib</Filter>
     </ClCompile>
+    <ClCompile Include="Aitemu.cpp">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Trappu.cpp">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="AitemuB.cpp">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="AitemuC.cpp">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CSceneGame.h">
@@ -113,5 +125,22 @@
     <ClInclude Include="Update.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Aitemu.h">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Trappu.h">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="AitemuB.h">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="AitemuC.h">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Image.png">
+      <Filter>ソース ファイル</Filter>
+    </Image>
   </ItemGroup>
 </Project>

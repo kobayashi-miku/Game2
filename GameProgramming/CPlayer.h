@@ -8,9 +8,13 @@
 プレイヤークラス
 キャラクタクラスを継承
 */
-class CPlayer : public CCharacter {
+class CPlayer : public CRectangle {
 public:
-	static CPlayer *spThis;
+	bool mGameOver;
+	bool mGameClear;
+	int Life;
+	float mFx, mFy;
+	static CPlayer *spInstance;
 	CPlayer();
 	//更新処理
 	void Update();

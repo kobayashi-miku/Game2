@@ -45,7 +45,7 @@ void CPlayer::Render()
 }
 
 void CPlayer::Collision(CRectangle *ri, CRectangle *ry) {
-	if (ry->mTag == EBLOOK){
+	if (ry->mTag == EBLOCK){
 		int mx, my;
 		if (CRectangle::Collision(ry, &mx, &my)) {
 			//abs(x) x‚Ìâ‘Î’l‚ğ‹‚ß‚é
@@ -57,5 +57,7 @@ void CPlayer::Collision(CRectangle *ri, CRectangle *ry) {
 			else {
 				//Rect‚ğy‚¾‚¯ˆÚ“®‚·‚é
 				y += my;
+			}
+		}
 	}
 }

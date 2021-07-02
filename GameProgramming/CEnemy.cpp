@@ -24,13 +24,10 @@ void CEnemy::Update() {
 */
 void CEnemy::Collision(CRectangle &r) {
 	//mEnabledがfalseなら戻る
-	if (!mEnabled) return false;
+	if (!mEnabled) return;
 	//親のCollisionメソッドを呼び出す
 	if (CRectangle::Collision(r)) {
 		switch (r.mTag) {
-		case ETBLOCK:
-			mFx *= -1;
-			break;
 		case EBLOCK:
 			int mx, my;
 			if (CRectangle::Collision(&r, &mx, &my)) {
@@ -47,9 +44,9 @@ void CEnemy::Collision(CRectangle &r) {
 			//衝突していれば反転
 			break;
 		}
-		return true;
+		return ;
 	}
-	return false;
+	return ;
 }
 
 void CEnemy::Render(){
