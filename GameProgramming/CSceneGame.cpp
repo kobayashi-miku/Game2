@@ -6,11 +6,109 @@
 #include "CPlayer.h"
 #include "CEnemy.h"
 #include "CText.h"
-
+#include <stdio.h>
+#include "Aitemu.h"
+#include "AitemuB.h"
+#include "AitemuC.h"
+#include "Trappu.h"
+int CSceneGame::e;
 
 
 void CSceneGame::Init() {
+	//シーンの設定
+	mScene = EGAME;
 
+	Texture.Load("Image.tga");
+	//文字画像の読み込み
+	CText::mFont.Load("font.tga");
+
+	//クラスのメンバ変数への代入
+	CPlayer *Player = new CPlayer();
+	Player->x = 150;
+	Player->y = 150;
+	Player->w = 25;
+	Player->h = 25;
+	Player->mEnabled = true;
+
+	int map[6][10] =
+	{
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		{ 1, 5, 0, 0, 0, 0, 6, 0, 0, 1 },
+		{ 1, 0, 2, 0, 1, 1, 0, 0, 0, 1 },
+		{ 1, 0, 1, 0, 0, 3, 0, 7, 0, 1 },
+		{ 1, 4, 0, 0, 0, 0, 1, 0, 0, 1 },
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+	};
+	e = 0;
+	for (int j = 0; j < 6; j++) {
+		for (int i = 0; i < 100; i++) {
+			//mapの要素が1の時、四角形配置
+			if (map[j][i] == 1) {
+				CMap *Map = new CMap();
+				//四角形に値を設定
+				Map->mEnabled = true;
+				Map->x = i * 100 - 350;
+				Map->y = j * -100 + 250;
+				Map->w = 50;
+				Map->h = 50;
+			}
+			else if (map[j][i] == 2) {
+				e++;
+				CEnemy *Enemy = new CEnemy();
+				Enemy->x = i * 100 - 350;
+				Enemy->y = j * -100 + 250;
+				//右へ移動
+				Enemy->mFx = 1;
+				Enemy->mFy = 0;
+			}
+			else if (map[j][i] == 3) {
+				e++;
+				CEnemy *Enemy = new CEnemy();
+				Enemy->x = i * 100 - 350;
+				Enemy->y = j * -100 + 250;
+				//右へ移動
+				Enemy->mFx = 0;
+				Enemy->mFy = 1;
+				e = e + 1;
+			}
+			if (map[j][i] == 4) {
+				Aitemu *Map = new Aitemu();
+				//四角形に値を設定
+				Map->mEnabled = true;
+				Map->x = i * 100 - 350;
+				Map->y = j * -100 + 250;
+				Map->w = 40;
+				Map->h = 40;
+			}
+			if (map[j][i] == 5) {
+				AitemuB *Map = new AitemuB();
+				//四角形に値を設定
+				Map->mEnabled = true;
+				Map->x = i * 100 - 350;
+				Map->y = j * -100 + 250 ;
+				Map->w = 40;
+				Map->h = 40;
+			}
+			if (map[j][i] == 6) {
+				AitemuC *Map = new AitemuC();
+				//四角形に値を設定
+				Map->mEnabled = true;
+				Map->x = i * 100 - 350;
+				Map->y = j * -100 + 250;
+				Map->w = 40;
+				Map->h = 40;
+			}
+			if (map[j][i] == 7) {
+				Trappu *Map = new Trappu();
+				//四角形に値を設定
+				Map->mEnabled = true;
+				Map->x = i * 100 - 350;
+				Map->y = j * -100 + 250;
+				Map->w = 40;
+				Map->h = 40;
+			}
+		}
+	}
 }
 
 
@@ -75,8 +173,19 @@ void CSceneGame::Update() {
 		//描画処理
 		VectorRect[i]->Render();
 	}
+
+	glColor4f(1.0f, 0.0f, 0.0f, 1.0f); //赤
+	CText::DrawString("R:1.0 G:0.0 B:0.0 A:1.0", -380, 280, 8, 16);
+	glColor4f(0.0f, 1.0f, 0.0f, 1.0f); //緑
+	CText::DrawString("R:0.0 G:1.0 B:0.0 A:1.0", -380, 250, 8, 16);
+	glColor4f(0.0f, 0.0f, 1.0f, 1.0f); //青
+	CText::DrawString("R:0.0 G:0.0 B:1.0 A:1.0", -380, 220, 8, 16);
+
+	glColor4f(1.0f, 1.0f, 1.0f, 1.0f); //白
+
 	//文字列の描画
 	CText::DrawString("zanki", CPlayer::spInstance->x + 170, 250, 16, 16);
+	CText::DrawString("sucoa", CPlayer::spInstance->x + 270, 250, 16, 16);
 
 	if (CPlayer::spInstance->mGameOver){
 		CText::DrawString("GameOver", CPlayer::spInstance->x, 0, 8, 16);
@@ -95,12 +204,9 @@ void CSceneGame::Update() {
 
 	CText::DrawString("Player", CPlayer::spInstance->x + 120, -250, 16, 16);
 
-
 	//整数を文字列に変換する
 	sprintf(buf, "%d", CPlayer::spInstance->Life);
 	CText::DrawString(buf, CPlayer::spInstance->x + 320, -250, 16, 16);
-
-
 
 	if (CSceneGame::e == 0){
 		CPlayer::spInstance->mGameClear = true;
