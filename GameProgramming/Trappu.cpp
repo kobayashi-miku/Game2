@@ -1,5 +1,6 @@
 #include "Trappu.h"
 #include "CPlayer.h"
+
 extern CTexture Texture;
 
 //デフォルトコンストラクタ
@@ -22,7 +23,7 @@ void Trappu::Collision(CRectangle *i, CRectangle *y){
 		switch (y->mTag){
 		case EPLAYER:
 			mEnabled = false;
-//		   Life=Life-1;
+		    Life=Life-1;
 			break;
 		}
 	}

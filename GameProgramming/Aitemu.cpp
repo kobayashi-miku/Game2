@@ -1,7 +1,7 @@
 #include "Aitemu.h"
 #include "CPlayer.h"
 extern CTexture Texture;
-
+int CPlayer::sucoa;
 //デフォルトコンストラクタ
 Aitemu::Aitemu(){
 
@@ -22,7 +22,7 @@ void Aitemu::Collision(CRectangle *i, CRectangle *y){
 		switch (y->mTag){
 		case EPLAYER:
 			mEnabled = false;
-//			CPlayer::スコア=CPlayer::スコア+100;
+			CPlayer::sucoa=CPlayer::sucoa+100;
 			break;
 		}
 	}

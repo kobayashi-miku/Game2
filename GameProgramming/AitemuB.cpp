@@ -22,7 +22,7 @@ void AitemuB::Collision(CRectangle *i, CRectangle *y){
 		switch (y->mTag){
 		case EPLAYER:
 			mEnabled = false;
-//			CPlayer::スコア=CPlayer::スコア+200;
+			CPlayer::sucoa=CPlayer::sucoa+200;
 			break;
 		}
 	}

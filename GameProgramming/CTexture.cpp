@@ -1,4 +1,3 @@
-
 #include "CTexture.h"
 #include <stdio.h>	//ファイルの入力に使用
 #include <string.h>

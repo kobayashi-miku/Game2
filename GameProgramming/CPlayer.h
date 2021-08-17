@@ -10,9 +10,11 @@
 */
 class CPlayer : public CRectangle {
 public:
+	static int sucoa;
 	bool mGameOver;
 	bool mGameClear;
-	int Life;
+	static int Life;
+	int mAniCnt; //アニメーション用のカウンタ
 	float mFx, mFy;
 	static CPlayer *spInstance;
 	CPlayer();

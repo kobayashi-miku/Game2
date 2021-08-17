@@ -21,6 +21,7 @@ public:
 		EENEMY,         //敵
 //		ETBLOOK,        //透明ブロック
 		EAITEMU,        //アイテム
+		ETRAP,           //トラップ
 	};
 	ETag mTag;	//列挙型の変数
 	//デフォルトコンストラクタ

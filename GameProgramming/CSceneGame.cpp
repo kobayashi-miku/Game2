@@ -34,8 +34,8 @@ void CSceneGame::Init() {
 	{
 		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 		{ 1, 5, 0, 0, 0, 0, 6, 0, 0, 1 },
-		{ 1, 0, 2, 0, 1, 1, 0, 0, 0, 1 },
-		{ 1, 0, 1, 0, 0, 3, 0, 7, 0, 1 },
+		{ 1, 0, 2, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 1, 0, 1, 0, 3, 0, 7, 0, 1 },
 		{ 1, 4, 0, 0, 0, 0, 1, 0, 0, 1 },
 		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 	};
@@ -66,9 +66,9 @@ void CSceneGame::Init() {
 				CEnemy *Enemy = new CEnemy();
 				Enemy->x = i * 100 - 350;
 				Enemy->y = j * -100 + 250;
-				//‰E‚ÖˆÚ“®
-				Enemy->mFx = 0;
-				Enemy->mFy = 1;
+				//ã‚ÖˆÚ“®
+				Enemy->mFx = 1;
+				Enemy->mFy = 0;
 				e = e + 1;
 			}
 			if (map[j][i] == 4) {
@@ -184,8 +184,8 @@ void CSceneGame::Update() {
 	glColor4f(1.0f, 1.0f, 1.0f, 1.0f); //”’
 
 	//•¶Žš—ñ‚Ì•`‰æ
-	CText::DrawString("zanki", CPlayer::spInstance->x + 170, 250, 16, 16);
-	CText::DrawString("sucoa", CPlayer::spInstance->x + 270, 250, 16, 16);
+	CText::DrawString("zanki", CPlayer::spInstance->x + 170, 270, 8, 16);
+	CText::DrawString("sucoa", CPlayer::spInstance->x + 170, 250, 8, 16);
 
 	if (CPlayer::spInstance->mGameOver){
 		CText::DrawString("GameOver", CPlayer::spInstance->x, 0, 8, 16);
@@ -198,11 +198,11 @@ void CSceneGame::Update() {
 	}
 
 	//®”‚ð•¶Žš—ñ‚É•ÏŠ·‚·‚é
-	char buf[10];//‚X•¶Žš‚Ü‚ÅOK
+	char buf[100];//‚X•¶Žš‚Ü‚ÅOK
 	sprintf(buf, "%d", e);
 	CText::DrawString(buf, CPlayer::spInstance->x + 340, 250, 16, 16);
 
-	CText::DrawString("Player", CPlayer::spInstance->x + 120, -250, 16, 16);
+	CText::DrawString("Player", CPlayer::spInstance->x + 120, -250, 8, 16);
 
 	//®”‚ð•¶Žš—ñ‚É•ÏŠ·‚·‚é
 	sprintf(buf, "%d", CPlayer::spInstance->Life);

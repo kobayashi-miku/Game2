@@ -1,5 +1,6 @@
 #include "CEnemy.h"
 #include "CTexture.h"
+#include "CSceneGame.h"
 
 //extern : 他のソースファイルの外部変数にアクセスする宣言
 extern CTexture Texture;
@@ -42,6 +43,16 @@ void CEnemy::Collision(CRectangle &r) {
 				}
 			}
 			//衝突していれば反転
+			break;
+		case ETRAP:
+			//トラップに当たると無効にする
+			mEnabled = false;
+			CSceneGame::e--;
+			break;
+		case EAITEMU:
+			//アイテムに当たると無効にする
+			mEnabled = false;
+			CSceneGame::e--;
 			break;
 		}
 		return ;

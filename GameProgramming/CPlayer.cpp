@@ -1,20 +1,28 @@
 #include "CPlayer.h"
 #include "CKey.h"
 #include "CSceneGame.h"
+#define ANICNT 30 //アニメーションの切り替え
 
 //extern：他のソースファイルの外部変数にアクセスする宣言
 extern CTexture Texture;
-
+int CPlayer::Life = 3;
 CPlayer::CPlayer()
 : mFx(1.0f), mFy(1.0f)
+, mAniCnt(0)
+, mGameOver(false)
+, mGameClear(false)
 {
 	mTag = EPLAYER;	//タグの設定
 	spInstance = this;
 }
+
 CPlayer*CPlayer::spInstance = 0;
 
 //更新処理
 void CPlayer::Update() {
+	if (mGameOver)
+		return;
+
 	if (CKey::Push('A')) {
 		x -= 3;
 		mFx = -1;
@@ -39,9 +47,33 @@ void CPlayer::Update() {
 	}
 }
 
-void CPlayer::Render()
-{
-	CRectangle::Render(Texture, 146 - 16, 146 + 16, 146 + 16, 146 - 16);
+void CPlayer::Render(){
+	if (mGameOver)
+		return;
+	mAniCnt++;
+	mAniCnt %= ANICNT;
+	if (mAniCnt < ANICNT / 2)
+	{
+		if (mFx >= 0)
+		{
+			CRectangle::Render(Texture, 130, 162, 162, 130);
+		}
+		else
+		{
+			CRectangle::Render(Texture, 162, 130, 162, 130);
+		}
+	}
+	else
+	{
+		if (mFx >= 0)
+		{
+			CRectangle::Render(Texture, 162, 194, 162, 130);
+		}
+		else
+		{
+			CRectangle::Render(Texture, 194, 162, 162, 130);
+		}
+	}
 }
 
 void CPlayer::Collision(CRectangle *ri, CRectangle *ry) {

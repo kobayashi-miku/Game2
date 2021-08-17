@@ -9,6 +9,7 @@ CRectangleクラスを継承する
 */
 class Trappu: public CRectangle{
 public:
+	int Life;
 	int mFx, mFy;    //移動量
 
 	//デフォルトコンストラクタ
